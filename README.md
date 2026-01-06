@@ -1,9 +1,9 @@
-🚀 Java RMI Calculator (Terminal-Based) — Java 17 Compatible
+#🚀 Java RMI Calculator (Terminal-Based) — Java 17 Compatible
 
 A terminal-based distributed calculator using Java RMI, running client and server in separate JVMs.
 All calculation logic executes on the server, while the client interacts via remote method calls.
 
-📌 Project Overview
+##📌 Project Overview
 
 This project demonstrates:
 
@@ -21,23 +21,7 @@ Java 17 compatibility (no deprecated SecurityManager)
 
 “RMI allows remote calls to appear local — the server executes logic while the client only calls methods.”
 
-🗂 Project Structure
-RMI_Calculator/
-│
-├── common/
-│   └── Calculator.java          # Remote Interface
-│
-├── server/
-│   ├── CalculatorImpl.java      # Remote Object Implementation
-│   └── RMIServer.java           # Server Entry Point
-│
-├── client/
-│   └── RMIClient.java           # Terminal-Based Client
-│
-├── policy/
-│   └── java.policy              # (Optional)
-│
-└── README.md                    # This file
+
 
 ⚙ Requirements
 
@@ -119,7 +103,7 @@ Enter choice:
 
 Enter numbers as prompted. Results are calculated on the server.
 
-❗ Important Notes
+##❗ Important Notes
 
 Start terminals in order: Registry → Server → Client
 
@@ -137,7 +121,7 @@ Calculator calc = (Calculator) Naming.lookup("rmi://localhost:1099/CalculatorSer
 
 SecurityManager is not needed in Java 17
 
-🐞 Common Errors & Fixes
+##🐞 Common Errors & Fixes
 Error	Cause	Fix
 'rmiregistry' is not recognized	JDK bin not in PATH	Use java -cp . sun.rmi.registry.RegistryImpl 1099
 ConnectException: Connection refused	Registry/server not running	Start registry → server → client
@@ -157,6 +141,7 @@ Java Module System support (module-info.java)
 Compare RMI vs REST/gRPC for distributed systems
 
 
+## 🗂 Project Structure
 ```bat
 RMI_Calculator/
 │
