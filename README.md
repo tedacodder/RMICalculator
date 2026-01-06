@@ -1,9 +1,9 @@
-#🚀 Java RMI Calculator (Terminal-Based) — Java 17 Compatible
+# 🚀 Java RMI Calculator (Terminal-Based) — Java 17 Compatible
 
 A terminal-based distributed calculator using Java RMI, running client and server in separate JVMs.
 All calculation logic executes on the server, while the client interacts via remote method calls.
 
-##📌 Project Overview
+## 📌 Project Overview
 
 This project demonstrates:
 
@@ -23,7 +23,7 @@ Java 17 compatibility (no deprecated SecurityManager)
 
 
 
-⚙ Requirements
+## ⚙ Requirements
 
 Java JDK 17 or later
 
@@ -39,7 +39,7 @@ javac --version
 
 ⚠️ Must be JDK, not JRE.
 
-🧮 Supported Operations
+## 🧮 Supported Operations
 
 All executed on the server:
 
@@ -68,19 +68,19 @@ javac common\*.java server\*.java client\*.java
 1️⃣ Start the RMI Registry
 
 If rmiregistry is not recognized:
-
+```bat
 java -cp . sun.rmi.registry.RegistryImpl 1099
-
+```
 
 Leave this terminal open.
 
 2️⃣ Start the Server
 
 Open a new terminal:
-
+```bat
 cd "C:\Users\new\IdeaProjects\RMI_Calculator"
 java server.RMIServer
-
+```
 
 Expected output:
 
@@ -89,10 +89,10 @@ RMI Calculator Server is running...
 3️⃣ Start the Client
 
 Open another terminal:
-
+```bat
 cd "C:\Users\new\IdeaProjects\RMI_Calculator"
 java client.RMIClient
-
+```
 
 You will see the interactive menu:
 
@@ -103,7 +103,7 @@ Enter choice:
 
 Enter numbers as prompted. Results are calculated on the server.
 
-##❗ Important Notes
+## ❗ Important Notes
 
 Start terminals in order: Registry → Server → Client
 
@@ -121,7 +121,7 @@ Calculator calc = (Calculator) Naming.lookup("rmi://localhost:1099/CalculatorSer
 
 SecurityManager is not needed in Java 17
 
-##🐞 Common Errors & Fixes
+## 🐞 Common Errors & Fixes
 Error	Cause	Fix
 'rmiregistry' is not recognized	JDK bin not in PATH	Use java -cp . sun.rmi.registry.RegistryImpl 1099
 ConnectException: Connection refused	Registry/server not running	Start registry → server → client
